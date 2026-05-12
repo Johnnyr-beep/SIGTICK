@@ -53,8 +53,11 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 # Copiar el código de la aplicación
 COPY . /var/www/html/
 
-# Ajustar permisos
-RUN chown -R www-data:www-data /var/www/html \
+# Crear directorios necesarios y ajustar permisos
+RUN mkdir -p /var/www/html/files \
+    && mkdir -p /var/www/html/config \
+    && mkdir -p /var/www/html/marketplace \
+    && chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html \
     && chmod -R 777 /var/www/html/files \
     && chmod -R 777 /var/www/html/config \
