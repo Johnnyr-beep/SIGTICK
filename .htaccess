@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Skip if already inside /public
+RewriteCond %{REQUEST_URI} !^/glpi/public/
+# Skip actual static files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Route everything through public/index.php
+RewriteRule ^(.*)$ public/index.php [QSA,L]
+
+# If accessing root directly, redirect to public/index.php
+RewriteRule ^$ public/index.php [QSA,L]
