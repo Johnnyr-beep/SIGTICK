@@ -1,9 +1,9 @@
 <?php
 class DB extends DBmysql {
-   public $dbhost = 'localhost';
+   public $dbhost = '20.121.178.90';
    public $dbuser = 'root';
    public $dbpassword = 'Root';
-   public $dbdefault = 'glpi';
+   public $dbdefault = 'TICKETS_DB';
    public $use_utf8mb4 = true;
    public $allow_datetime = false;
    public $allow_signed_keys = false;
