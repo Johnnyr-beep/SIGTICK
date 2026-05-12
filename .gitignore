@@ -1,0 +1,33 @@
+# Credenciales y configuración sensible
+.env
+config/config_db.php
+
+# Archivos de GLPI generados
+files/_cache/
+files/_cron/
+files/_dumps/
+files/_graphs/
+files/_lock/
+files/_log/
+files/_pictures/
+files/_plugins/
+files/_rss/
+files/_sessions/
+files/_tmp/
+files/_uploads/
+
+# Dependencias
+vendor/
+node_modules/
+
+# Marketplace (plugins instalados)
+marketplace/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
