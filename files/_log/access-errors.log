@@ -1,0 +1,70 @@
+2026-05-07 21:10:40 [@DESKTOP-J6OQ37G]
+CSRF check failed for User ID:  at /front/login.php
+[2026-05-07 21:10:40] User ID: `Anonymous` tried to execute an invalid request on `/front/login.php`.
+
+  Backtrace :
+  .\src\Session.php:1797                             
+  ...ner\ControllerListener\CheckCsrfListener.php:89 Session::checkCSRF()
+  ...ymfony\event-dispatcher\EventDispatcher.php:260 Glpi\Kernel\Listener\ControllerListener\CheckCsrfListener->onKernelController()
+  ...ymfony\event-dispatcher\EventDispatcher.php:220 Symfony\Component\EventDispatcher\EventDispatcher::Symfony\Component\EventDispatcher\{closure}()
+  ...symfony\event-dispatcher\EventDispatcher.php:56 Symfony\Component\EventDispatcher\EventDispatcher->callListeners()
+  .\vendor\symfony\http-kernel\HttpKernel.php:169    Symfony\Component\EventDispatcher\EventDispatcher->dispatch()
+  .\vendor\symfony\http-kernel\HttpKernel.php:76     Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+  .\vendor\symfony\http-kernel\Kernel.php:208        Symfony\Component\HttpKernel\HttpKernel->handle()
+  .\public\index.php:71                              Symfony\Component\HttpKernel\Kernel->handle()
+2026-05-12 00:17:03 [@DESKTOP-J6OQ37G]
+CSRF check failed for User ID:  at /ajax/dropdownAllItems.php
+[2026-05-12 00:17:03] User ID: `Anonymous` tried to execute an invalid request on `/ajax/dropdownAllItems.php`.
+
+  Backtrace :
+  .\src\Session.php:1797                             
+  ...ner\ControllerListener\CheckCsrfListener.php:82 Session::checkCSRF()
+  ...ymfony\event-dispatcher\EventDispatcher.php:260 Glpi\Kernel\Listener\ControllerListener\CheckCsrfListener->onKernelController()
+  ...ymfony\event-dispatcher\EventDispatcher.php:220 Symfony\Component\EventDispatcher\EventDispatcher::Symfony\Component\EventDispatcher\{closure}()
+  ...symfony\event-dispatcher\EventDispatcher.php:56 Symfony\Component\EventDispatcher\EventDispatcher->callListeners()
+  .\vendor\symfony\http-kernel\HttpKernel.php:169    Symfony\Component\EventDispatcher\EventDispatcher->dispatch()
+  .\vendor\symfony\http-kernel\HttpKernel.php:76     Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+  .\vendor\symfony\http-kernel\Kernel.php:208        Symfony\Component\HttpKernel\HttpKernel->handle()
+  .\public\index.php:71                              Symfony\Component\HttpKernel\Kernel->handle()
+2026-05-12 00:17:03 [@DESKTOP-J6OQ37G]
+CSRF check failed for User ID:  at /ajax/comments.php
+[2026-05-12 00:17:04] User ID: `Anonymous` tried to execute an invalid request on `/ajax/comments.php`.
+
+  Backtrace :
+  .\src\Session.php:1797                             
+  ...ner\ControllerListener\CheckCsrfListener.php:82 Session::checkCSRF()
+  ...ymfony\event-dispatcher\EventDispatcher.php:260 Glpi\Kernel\Listener\ControllerListener\CheckCsrfListener->onKernelController()
+  ...ymfony\event-dispatcher\EventDispatcher.php:220 Symfony\Component\EventDispatcher\EventDispatcher::Symfony\Component\EventDispatcher\{closure}()
+  ...symfony\event-dispatcher\EventDispatcher.php:56 Symfony\Component\EventDispatcher\EventDispatcher->callListeners()
+  .\vendor\symfony\http-kernel\HttpKernel.php:169    Symfony\Component\EventDispatcher\EventDispatcher->dispatch()
+  .\vendor\symfony\http-kernel\HttpKernel.php:76     Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+  .\vendor\symfony\http-kernel\Kernel.php:208        Symfony\Component\HttpKernel\HttpKernel->handle()
+  .\public\index.php:71                              Symfony\Component\HttpKernel\Kernel->handle()
+2026-05-12 00:17:05 [@DESKTOP-J6OQ37G]
+CSRF check failed for User ID:  at /ajax/dropdownAllItems.php
+[2026-05-12 00:17:05] User ID: `Anonymous` tried to execute an invalid request on `/ajax/dropdownAllItems.php`.
+
+  Backtrace :
+  .\src\Session.php:1797                             
+  ...ner\ControllerListener\CheckCsrfListener.php:82 Session::checkCSRF()
+  ...ymfony\event-dispatcher\EventDispatcher.php:260 Glpi\Kernel\Listener\ControllerListener\CheckCsrfListener->onKernelController()
+  ...ymfony\event-dispatcher\EventDispatcher.php:220 Symfony\Component\EventDispatcher\EventDispatcher::Symfony\Component\EventDispatcher\{closure}()
+  ...symfony\event-dispatcher\EventDispatcher.php:56 Symfony\Component\EventDispatcher\EventDispatcher->callListeners()
+  .\vendor\symfony\http-kernel\HttpKernel.php:169    Symfony\Component\EventDispatcher\EventDispatcher->dispatch()
+  .\vendor\symfony\http-kernel\HttpKernel.php:76     Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+  .\vendor\symfony\http-kernel\Kernel.php:208        Symfony\Component\HttpKernel\HttpKernel->handle()
+  .\public\index.php:71                              Symfony\Component\HttpKernel\Kernel->handle()
+2026-05-12 00:17:22 [@DESKTOP-J6OQ37G]
+CSRF check failed for User ID:  at /front/login.php
+[2026-05-12 00:17:22] User ID: `Anonymous` tried to execute an invalid request on `/front/login.php`.
+
+  Backtrace :
+  .\src\Session.php:1797                             
+  ...ner\ControllerListener\CheckCsrfListener.php:89 Session::checkCSRF()
+  ...ymfony\event-dispatcher\EventDispatcher.php:260 Glpi\Kernel\Listener\ControllerListener\CheckCsrfListener->onKernelController()
+  ...ymfony\event-dispatcher\EventDispatcher.php:220 Symfony\Component\EventDispatcher\EventDispatcher::Symfony\Component\EventDispatcher\{closure}()
+  ...symfony\event-dispatcher\EventDispatcher.php:56 Symfony\Component\EventDispatcher\EventDispatcher->callListeners()
+  .\vendor\symfony\http-kernel\HttpKernel.php:169    Symfony\Component\EventDispatcher\EventDispatcher->dispatch()
+  .\vendor\symfony\http-kernel\HttpKernel.php:76     Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+  .\vendor\symfony\http-kernel\Kernel.php:208        Symfony\Component\HttpKernel\HttpKernel->handle()
+  .\public\index.php:71                              Symfony\Component\HttpKernel\Kernel->handle()

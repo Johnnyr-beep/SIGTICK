@@ -1,0 +1,43 @@
+ID,HTM,NOMBRE,UBICACION,RESPONSABLE,CARGO,EQUIPO,SOPHOS,MARCA,UPS,MODELO,N/S,MAC,S/O,LICENCIA S/O,TIPO DE LICENCIA,LICENCIA ICG / FRONT RETAIL,RAM (GB),DISCO (GB),PROCESADOR,IP,CONTRASEÑAS,LICENCIA DE OFFICE,FECHA DE COMPRA,OBSERVACION
+1,CFSC-01,CFSTESORERIA,Oficina inversiones - contabilidad,Glendy,Tesoreria,Todo en uno ,SI,LENOVO,SI,F0GH0109LD,MP24W5SH,088FC3BBF59B,Windows 10 Pro 64 bits,Licenciado - PYVJ6,OEM,NO,8 GB,SSD 512 B,12th Gen Intel® Core™ ¡3-1215U (8CPUs),192.168.1.24,,Office 365,,UPS NUEVA Y PC NUEVO TODO EN UNO LENOVO
+2,CFSC-02,CFSC-CONTABILIDAD,Oficina inversiones - contabilidad,Victor,Auxiliar contable,Todo en uno ,SI,LENOVO,SI,F0GH0109LD,MP2DH7GD,08-8F-C3-BC-12-96,Windows 10 Pro 64 bits,NO TIENE,OEM,SI (COMPARTIDA CON AUXCONTABLE) ICG,8 GB,SSD 512 GB,12th Gen Intel® Core™ ¡3-1215U (8CPUs),192.168.1.139,,Office 365,,"PC NUEVO TODO EN UNO LENOVO,  Necesita ups independiente"
+3,CFSC-03,CFSCTESORERIA-2,Oficina inversiones - contabilidad,Martha,Tesoreria,Todo en uno ,SI,LENOVO,SI,12B100 7HLS,NP26V4SA,088FC3B88D3D,Windows 10 Pro 64 bits,Licenciado - 3DB6G,OEM,NO,8 GB,SSD 256 GB   ,12th Gen Intel® Core™ ¡3-1220P (12CPUs),192.168.1.136,,Office 365,,UPS NUEVA Y PC NUEVO TODO EN UNO LENOVO
+4,CFSC-04,CFSCAUXAPRENDIZ,Oficina inversiones - contabilidad,Aprendiz,Auxiliar contable,Torre,SI,DELL,SI,Vostro 3471,9SQ7Z03,E454E8CBCDCF,Windows 10 Pro 64 bits,Licenciado - T6PKC,OEM,SI (COMPARTIDA CON CONTADORA) ICG,8 GB,SSD 256 GB / HDD 1 TB,Intel® Core™ ¡3 -9100 CPU @ 3.60GHz (4CPUs) ,192.168.1.238,,Office 365,,
+5,CFSC-05,FACTURACIÓN1,Oficina inversiones - facturacion,Joseth Maldonado,Facturacion,Torre escritorio,,DELL,SI,Vostro 3267,G6HCYJ2,484D7ECD9F5D,Windows 10 Pro 64 bits,Licenciado - RGDGP,OEM,ICG,4 GB,SSD 256 GB,Intel® Core™ ¡3 -6100 CPU @ 3.70GHz (4CPUs) ,192.168.9.254,,Office 365,,UPS NUEVA Y PC NUEVO TODO EN UNO LENOVO
+6,CFSC-06,FACTURACIÓN2,Oficina inversiones - facturacion,Lisbeth Basquez,Facturacion,Torre escritorio,,DELL,SI,Vostro 3470,HYCWZV2,8CEC4BCA3776,Windows 10 Pro 64 bits,Licenciado - D9MP2,OEM,ICG,8 GB,SSD 128 GB,Intel® Core™ ¡3 -8100 CPU @ 3.60GHz (4CPUs) ,192.168.9.133,,Office 365,,
+7,CFSC-07,ASISTENTEAD,Oficina inversiones - facturacion,Katry,Asistente Administrativo,Escritorio NUC,SI,INTEL NUC,SI,NUC7CJYH,G6JY128004N9,1C697AA91452,Windows 10 Pro 64 bits,Licenciado - F9CKF,OEM,ICG,8 GB,SSD 128 GB,Intel® Celeron® J4005 CPU @ 2.00GHz (2CPUs),192.168.9.209,,Office 365,,
+8,CFSC-08,CFSCAUXPRODUCCION,Oficina inversiones Produccion,Marisol Sierra,Asistente de Produccion,Portatil,SI,Hp,NO,Hp Laptop 15-dw3xxx,CND2472XHW,7C57584AD234,Windows 10 Pro 64 bits,Licenciado - 6MT6Y,VOLUME,ICG,12 GB,SSD 256 GB,11th Gen Intel® Core™ ¡3-1115G4 @ 3.00GHZ (4 CPUS),192.168.9.196,N/A,Office 365,,
+9,CFSC-09,CFSCALIDAD,Oficina inversiones Produccion,Juan bacca,Asistente de Calidad,Escritorio NUC,SI,INTEL NUC,NO,NUC7CJYHN,G6JY211009GQ,88AEDD032AA9,Windows 10 Pro 64 bits,Licenciado - 6MT6Y,VOLUME,NO,8 GB,SSD 256 GB,Intel® Celeron® J4025 CPU @ 2.00GHz (2CPUs),192.168.9.203,2022,Office 365,,FALTA UPS
+10,CFSC-10,CFSC-SST,Oficina inversiones Produccion,Roxana salguedo,Coordinadora Sst,Portatil,SI,LENOVO,NO,81WB,PF3P34E5,8038FBC77B6C,Windows 10 Pro 64 bits,Licenciado - 2GYP4,OEM,NO,12 GB,SSD 256 GB,Intel® Core™ ¡3-10110U CPU @ 2.10GHz (4CPUs),192..168.9.130,CFSC2024.,Office 365,,
+11,CFSC-11,PRODUCCION4,Oficina inversiones Produccion,Abisai Cuevas,Auxiliar de produccion,Microtorre,SI,DELL,NO,Optiplex 3070,HMM7Z03,E454E892DC4C,Windows 10 Pro 64 bits,Licenciado - 9W3GP,OEM,ICG,4 GB,SSD 256 GB,Intel® Core™ ¡3 -9100T CPU @ 3.10GHz (4CPUs) ,192.168.9.215,,Office 365,,NO SE ENCUENTRA EN LA OFICINA
+12,CFSC-12,CFSCJEFEPLANTA,Oficina inversiones Produccion,ELIO ESPINOZA,Jefe Planta,Portatil,,DELL,NO,Inspiron3505,4RT1JK3,B445067F8906,WINDOWS 10 Home Single 64,Licenciado - QDBMP,OEM,ICG,8 GB,SSD 256 GB,AMD Ryzen 5 3450U With Radeon Vega Mobile Gfx (8CPUs),192.168.9.245,,Office 365,,
+13,CFSC-13,CFSCEMPAQUE,Planta Produccion,Gina Mercado,Lider Empaque,Todo en uno ,,LENOVO,SI,10160,CS02427849,F0761CACDAFC,WINDOWS 10 Home Single 64,Licenciado - HH64C,OEM,ICG,4 GB,SSD 512 GB,Intel® Pentium CPU j2900 @ 2.41+GHz (4CPUs) ,192.168.9.213,,sin licenciar,,
+14,CFSC-14,CFSDESPACHO,Planta Despacho,Ismael Arias,lider de despacho,Escritorio NUC,,INTEL NUC,SI,NUC7CJYHN,G6JY238006SL,88AEDD0B5C2A,Windows 11 Pro 64 bits,Licenciado - WFG6P,OEM,ICG,8 GB,SSD 512 GB,Intel® Celeron® J4025 CPU @ 2.00GHz (2CPUs),192.168.9.170,,Office 365,,
+15,CFSC-15,CFSCINSUMOS,Planta Produccion,German Barrios ,Lider de Insumos,Todo en uno ,SI,LENOVO,SI,10K400PLD,MP1A5MWD,9829A68C45CC,Windows 10 Pro 64 bits,Licenciado - 3V66T,RETAIL,ICG,4 GB,SSD 120 GB,Intel® Celeron® CPU J3060 @ 1.60GHz (2CPUs),192.168.9.174,,sin licenciar,,
+17,CFSC-16,COMPRASCFSC,Oficina inversiones Produccion,Andres Vargas,Compras,Portatil,SI,ASUS,NO,VivoBook_ASUSLaptop X515EA,R8N0CV11U86733B,E0-2E-0B-66-48-D3,Windows 11 Pro 64 bits,Licenciado - QYH22,OEM,ICG,12 GB,SSD 256 GB,11th Gen Intel® Core™ ¡3-1115G4 @ 3.00GHZ (4 CPUS),"192,168,9,150",Compras2024,Office 365,,PORTATIL NUEVO LENOVO 
+23,MT-01,CFSC-MTRIATESORERIA,Monteria,,,Todo en uno ,SI,LENOVO,SI,12SC001PLD,MP2GDNC6,40C2BA73459E,Windows 11 Pro 64 bits,Y243D-NDGMC-37K8R-8RBBJ-6MT6R,OEM,N/A,16 GB,SSD 512,"13th Gen Intel(R) Core(TM) i5-13420H (12 CPUs), ~2.1GHz",,N/A,Office 365,2/25/2025,
+24,MT-02,CFSC-MTRIAFACTURACION,Monteria,,,Todo en uno ,SI,LENOVO,SI,12SC001PLD,MP2GDL20,40C2BA734420,Windows 11 Pro 64 bits,TCH3N-HGRR8-YHMDX-43B2Y-43KTR,OEM,N/A,16 GB,SSD 512,"13th Gen Intel(R) Core(TM) i5-13420H (12 CPUs), ~2.1GHz",,N/A,Office 365,2/25/2025,
+25,MT-03,CFSC-MTRIALOGISTICA,Monteria,,,Todo en uno ,SI,LENOVO,SI,12SC001PLD,MP2GDL12,40C2BA734442,Windows 11 Pro 64 bits,NH3BV-789G3-WRWT2-BRP8X-C7JXF,OEM,N/A,16 GB,SSD 512,"13th Gen Intel(R) Core(TM) i5-13420H (12 CPUs), ~2.1GHz",,N/A,Office 365,2/25/2025,
+26,MT-04,SVRMONTERIA,Monteria,Monteria,Servidor,Micro server,,HPE,SI,ProLiant MicroServer Gen 10 Plus v2,3M1D1V14MT,,Windows 11 Pro 64 bits,GTPCY-NBQ4G-9F67W-MM79F-9W3GR,OEM,N/A,16 GB,DHH 1TB,"Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz (4CPUs), ~2.8GHz",,,,,
+27,MT-05,SUPERVISOR,HACE FALTA DATOS,,,,,,,,,,,,,,,,,,,,,
+16,,CFSCMANTENIMIEN,Planta Mantenimiento,Santiago Atencia,Lider mantenimiento,Portatil,,LENOVO,NO,80KY,PF09CK41,68F728B7C7C1,Windows 10 Pro 64 bits,Licenciado - 3V66T,RETAIL,NO,6 GB,HDD 500 GB,Intel® Core™ ¡3-4005U CPU @ 1.70GHz (4CPUs),192.168.9.211,,Microsoft office pro plus 2016,,Equipo dado de baja (diciembre 2024)
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
