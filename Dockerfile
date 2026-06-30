@@ -73,4 +73,11 @@ RUN mkdir -p /var/www/html/files \
 
 WORKDIR /var/www/html
 
+# Entrypoint: genera config_db.php desde variables de entorno al arrancar
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 EXPOSE 80
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["apache2-foreground"]
