@@ -77,7 +77,13 @@ fi
 
 # Opcional: restaura la clave de cifrado de GLPI desde el entorno (la que
 # descifra contrasenas SMTP/LDAP guardadas). Mantenla fuera del repo.
-if [ -n "$GLPI_CRYPT_KEY" ]; then
+# glpicrypt.key son 32 bytes BINARIOS: usa GLPI_CRYPT_KEY_B64 (base64).
+# GLPI_CRYPT_KEY (texto crudo) se mantiene como respaldo para llaves de texto.
+if [ -n "$GLPI_CRYPT_KEY_B64" ]; then
+  printf '%s' "$GLPI_CRYPT_KEY_B64" | base64 -d > "$CONFIG_DIR/glpicrypt.key"
+  chown www-data:www-data "$CONFIG_DIR/glpicrypt.key" 2>/dev/null || true
+  echo "[entrypoint] glpicrypt.key restaurada desde GLPI_CRYPT_KEY_B64 (base64)."
+elif [ -n "$GLPI_CRYPT_KEY" ]; then
   printf '%s' "$GLPI_CRYPT_KEY" > "$CONFIG_DIR/glpicrypt.key"
   chown www-data:www-data "$CONFIG_DIR/glpicrypt.key" 2>/dev/null || true
   echo "[entrypoint] glpicrypt.key restaurada desde GLPI_CRYPT_KEY."
