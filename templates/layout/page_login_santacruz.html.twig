@@ -1,0 +1,405 @@
+{#
+ # Layout especial para el login Santacruz
+ # Pantalla completa dividida con hero a la izquierda y formulario a la derecha
+ #}
+
+{% set theme = current_theme() %}
+{% if css_files is not defined %}
+   {% set css_files = [
+       {'path': 'lib/base.css'},
+       {'path': 'lib/tabler.css'},
+       {'path': 'css/glpi.scss'},
+       {'path': 'css/core_palettes.scss'}
+   ] %}
+
+   {% for theme_path in get_custom_themes_paths() %}
+      {% set css_files = css_files|merge([{'path': theme_path}]) %}
+   {% endfor %}
+{% endif %}
+{% if js_files is not defined %}
+   {% set js_files = [
+       {'path': 'lib/base.js'},
+       {'path': 'js/common.js'},
+       {'path': 'lib/fuzzy.js'}
+   ] %}
+{% endif %}
+{% if js_modules is not defined %}
+   {% set js_modules = [] %}
+{% endif %}
+{% if custom_header_tags is not defined %}
+   {% set custom_header_tags = [] %}
+{% endif %}
+
+{% set js_files = js_files|merge(get_plugins_js_scripts_files(true)) %}
+{% set js_modules = js_modules|merge(get_plugins_js_modules_files(true)) %}
+
+{% set is_anonymous_page = true %}
+
+{{ include('layout/parts/head.html.twig') }}
+
+<style>
+:root {
+    --sc-green: #2E7D32;
+    --sc-green-dark: #1B5E20;
+    --sc-green-light: #66BB6A;
+    --sc-green-soft: #E8F5E9;
+}
+
+html, body { height: 100%; margin: 0; padding: 0; }
+
+body.welcome-anonymous {
+    background: #f5f7fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.sc-login-wrap {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* HERO LEFT */
+.sc-login-hero {
+    position: relative;
+    flex: 1.2;
+    background:
+        linear-gradient(135deg, rgba(27, 94, 32, 0.92) 0%, rgba(46, 125, 50, 0.88) 50%, rgba(102, 187, 106, 0.78) 100%),
+        url('/pics/login-bg.jpg') center/cover no-repeat,
+        var(--sc-green-dark);
+    color: #ffffff;
+    padding: 48px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Patrón decorativo SVG */
+.sc-login-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.10) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(255,255,255,0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.sc-hero-content { position: relative; z-index: 1; }
+
+.sc-hero-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.sc-hero-logo img {
+    height: 56px;
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+}
+
+.sc-hero-brand-text {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.85;
+}
+
+.sc-hero-greeting {
+    margin-top: 32px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.sc-hero-clock {
+    font-size: 42px;
+    font-weight: 300;
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
+
+.sc-hero-clock .sc-date {
+    display: block;
+    font-size: 14px;
+    opacity: 0.85;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+}
+
+.sc-hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 40px;
+    line-height: 1.15;
+}
+
+.sc-hero-tagline {
+    font-size: 17px;
+    opacity: 0.92;
+    margin-top: 12px;
+    max-width: 480px;
+    line-height: 1.5;
+}
+
+/* Bloque "¿Cómo crear un caso?" */
+.sc-help-block {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-top: 28px;
+    max-width: 520px;
+}
+
+.sc-help-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.9;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.sc-help-channels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sc-help-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--sc-green-dark) !important;
+    text-decoration: none !important;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: none;
+}
+
+.sc-help-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    color: var(--sc-green-dark) !important;
+}
+
+.sc-help-btn.whatsapp { background: #25D366; color: #ffffff !important; }
+.sc-help-btn.whatsapp:hover { color: #ffffff !important; }
+.sc-help-btn .ti { font-size: 18px; }
+
+.sc-hero-footer {
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+/* RIGHT FORM */
+.sc-login-form-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 32px;
+    background: #ffffff;
+}
+
+.sc-login-form {
+    width: 100%;
+    max-width: 380px;
+}
+
+.sc-form-title {
+    color: var(--sc-green-dark);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.sc-form-sub {
+    color: #616161;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.sc-form-wrap .form-label {
+    color: #212121;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.sc-form-wrap .form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 15px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    background: #fafafa;
+}
+
+.sc-form-wrap .form-control:focus {
+    border-color: var(--sc-green);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.12);
+    outline: none;
+}
+
+.sc-form-wrap .btn-primary {
+    background: var(--sc-green);
+    border-color: var(--sc-green);
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.sc-form-wrap .btn-primary:hover {
+    background: var(--sc-green-dark);
+    border-color: var(--sc-green-dark);
+    transform: translateY(-1px);
+}
+
+.sc-form-wrap a {
+    color: var(--sc-green);
+}
+
+.sc-form-wrap a:hover {
+    color: var(--sc-green-dark);
+}
+
+.forgot_password a {
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.sc-form-foot {
+    margin-top: 22px;
+    text-align: center;
+    color: #9e9e9e;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .sc-login-wrap { flex-direction: column; }
+    .sc-login-hero {
+        padding: 32px 28px;
+        flex: none;
+    }
+    .sc-hero-title { font-size: 28px; margin-top: 24px; }
+    .sc-hero-clock { font-size: 32px; }
+    .sc-help-block { margin-top: 18px; padding: 16px 18px; }
+    .sc-login-form-wrap { padding: 32px 20px; }
+}
+
+@media (max-width: 480px) {
+    .sc-login-hero { padding: 24px 20px; }
+    .sc-hero-title { font-size: 24px; }
+    .sc-hero-tagline { font-size: 14px; }
+    .sc-help-channels { flex-direction: column; }
+    .sc-help-btn { justify-content: center; }
+}
+</style>
+
+<body class="welcome-anonymous sc-form-wrap">
+   <div class="sc-login-wrap">
+      <!-- HERO LATERAL -->
+      <div class="sc-login-hero">
+         <div class="sc-hero-content">
+            <div class="sc-hero-logo">
+               <img src="{{ asset_path('/pics/logos/logo-GLPI-100-white.png') }}" alt="Grupo Santacruz" />
+               <div>
+                  <div style="font-size:18px; font-weight:700; line-height:1.1;">Grupo Empresarial</div>
+                  <div style="font-size:22px; font-weight:300; line-height:1.1;">Santacruz</div>
+               </div>
+            </div>
+
+            <div class="sc-hero-greeting">
+               <span id="sc-greeting">Bienvenido</span>
+               <div class="sc-hero-clock">
+                  <span id="sc-clock">--:--</span>
+                  <span class="sc-date" id="sc-date"></span>
+               </div>
+            </div>
+
+            <div class="sc-hero-title">Mesa de Ayuda TI</div>
+            <div class="sc-hero-tagline">
+               Plataforma centralizada para reportar incidencias, solicitar servicios y gestionar el soporte tecnológico de todas las empresas del grupo.
+            </div>
+
+            <div class="sc-help-block">
+               <div class="sc-help-title">¿Necesitas reportar un caso?</div>
+               <div class="sc-help-channels">
+                  <a href="https://wa.me/573146472332?text=Hola,%20necesito%20soporte%20de%20TI" target="_blank" rel="noopener" class="sc-help-btn whatsapp">
+                     <i class="ti ti-brand-whatsapp"></i> WhatsApp
+                  </a>
+                  <a href="mailto:tisantacruz48@gmail.com?subject=Solicitud%20de%20soporte%20TI" class="sc-help-btn">
+                     <i class="ti ti-mail"></i> tisantacruz48@gmail.com
+                  </a>
+                  <a href="tel:+573146472332" class="sc-help-btn">
+                     <i class="ti ti-phone"></i> 314 647 2332
+                  </a>
+               </div>
+            </div>
+         </div>
+
+         <div class="sc-hero-footer">
+            &copy; {{ "now"|date("Y") }} Grupo Empresarial Santacruz &mdash; Todos los derechos reservados.
+         </div>
+      </div>
+
+      <!-- FORM DERECHO -->
+      <div class="sc-login-form-wrap">
+         <div class="sc-login-form">
+            <div class="sc-form-title">Inicia sesión</div>
+            <div class="sc-form-sub">Ingresa tus credenciales para acceder al sistema.</div>
+            {% block content_block %}{% endblock %}
+            <div class="sc-form-foot">
+               {% block footer_block %}{% endblock %}
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+   (function() {
+      function pad(n) { return n < 10 ? '0' + n : n; }
+      function update() {
+         var d = new Date();
+         var h = d.getHours();
+         var greet;
+         if (h < 12)      greet = 'Buenos días';
+         else if (h < 19) greet = 'Buenas tardes';
+         else             greet = 'Buenas noches';
+         var g = document.getElementById('sc-greeting');
+         var c = document.getElementById('sc-clock');
+         var f = document.getElementById('sc-date');
+         if (g) g.textContent = greet;
+         if (c) c.textContent = pad(d.getHours()) + ':' + pad(d.getMinutes());
+         if (f) {
+            var meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+            var dias = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+            f.textContent = dias[d.getDay()] + ', ' + d.getDate() + ' de ' + meses[d.getMonth()] + ' de ' + d.getFullYear();
+         }
+      }
+      update();
+      setInterval(update, 30000);
+   })();
+   </script>
+
+   {% block javascript_block %}{% endblock %}
+</body>
+</html>

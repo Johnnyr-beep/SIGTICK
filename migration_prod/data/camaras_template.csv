@@ -1,0 +1,6 @@
+name,entidad,tipo,marca,modelo,numero_serie,ip,mac,switch_name,switch_port,ubicacion_fisica,resolucion,gestion_url,comentario
+CAM-PDV70-01,PDV-LA 70,Cámara IP,Hikvision,DS-2CD2143G0-I,HKV-12345,192.168.20.101,BB:CC:DD:EE:FF:01,SW-PDV70-POE-01,1,Entrada principal,4MP,http://192.168.20.101,Cámara entrada cliente
+CAM-PDV70-02,PDV-LA 70,Cámara IP,Hikvision,DS-2CD2143G0-I,HKV-12346,192.168.20.102,BB:CC:DD:EE:FF:02,SW-PDV70-POE-01,2,Caja 1,4MP,http://192.168.20.102,
+CAM-PDV70-03,PDV-LA 70,Cámara IP,Dahua,IPC-HFW1431S,DH-9999,192.168.20.103,BB:CC:DD:EE:FF:03,SW-PDV70-POE-01,3,Caja 2,4MP,,
+CAM-PDV70-04,PDV-LA 70,Cámara IP,EZVIZ,C3X,EZ-77777,192.168.20.104,BB:CC:DD:EE:FF:04,SW-PDV70-POE-01,4,Parqueadero,2MP,,
+NVR-PDV70-01,PDV-LA 70,NVR,Hikvision,DS-7608NI-K2,HKV-NVR-001,192.168.20.50,CC:DD:EE:FF:00:01,SW-PDV70-ACC-01,8,Rack pared CCTV,8 canales,http://192.168.20.50,Grabador principal CCTV

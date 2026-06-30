@@ -1,0 +1,4 @@
+﻿Nombre;Numero de serie;Numero de inventario;Estado;Entidad;Ubicacion;Fabricante;Modelo;Tipo;Sistema operativo;Usuario asignado;Grupo asignado;Comentarios
+PC-PEREIRA-CAJA01;SN-ABC12345;INV-001;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-PEREIRA;PDV-PEREIRA > Caja 1;HP;EliteDesk 800 G6;Computador de escritorio;Windows 11 Pro;juan.perez;Soporte TI;Equipo nuevo de facturacion
+PC-CENTRO-ADMIN01;SN-XYZ67890;INV-002;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-CENTRO;PDV-CENTRO > Administracion;Lenovo;ThinkPad T14;Portatil;Windows 11 Pro;maria.gomez;Administracion;
+PC-AGRO-CONTAB01;SN-DEF11111;INV-003;Operativo;GRUPO SANTACRUZ > AGROPECUARIA > TESORERIA;OFICINAS ASC > Contabilidad;Dell;OptiPlex 7090;Computador de escritorio;Windows 10 Pro;carlos.ruiz;Contabilidad;

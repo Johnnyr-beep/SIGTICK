@@ -1,0 +1,4 @@
+﻿Nombre;Numero de serie;Numero de inventario;Estado;Entidad;Ubicacion;Fabricante;Modelo;Tipo;IP;MAC;Memoria (MB);Comentarios
+SW-PEREIRA-01;SW-001;INV-R01;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-PEREIRA;PDV-PEREIRA > Cuarto rack;TP-Link;TL-SG1024D;Switch;192.168.1.1;AA:BB:CC:11:22:33;128;Switch principal 24 puertos
+RT-CENTRO-01;RT-002;INV-R02;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-CENTRO;PDV-CENTRO > Bodega;Mikrotik;hAP ac2;Router;192.168.10.1;AA:BB:CC:44:55:66;128;Router de borde
+AP-AGRO-01;AP-003;INV-R03;Operativo;GRUPO SANTACRUZ > AGROPECUARIA > OFICINAS ASC;OFICINAS ASC > Sala de reuniones;Ubiquiti;UniFi AP AC Lite;Access Point;192.168.2.20;AA:BB:CC:77:88:99;512;WiFi corporativo

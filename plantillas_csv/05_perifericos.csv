@@ -1,0 +1,5 @@
+﻿Nombre;Numero de serie;Numero de inventario;Estado;Entidad;Ubicacion;Fabricante;Modelo;Tipo;Marca;Usuario asignado;Comentarios
+TEC-PEREIRA-01;TEC-001;INV-P01;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-PEREIRA;PDV-PEREIRA > Caja 1;Logitech;K120;Teclado;Logitech;juan.perez;Teclado USB
+RAT-PEREIRA-01;MOU-001;INV-P02;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-PEREIRA;PDV-PEREIRA > Caja 1;Logitech;M90;Mouse;Logitech;juan.perez;Mouse USB optico
+ESC-CENTRO-01;ESC-001;INV-P03;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-CENTRO;PDV-CENTRO > Administracion;HP;ScanJet Pro 2500;Escaner;HP;maria.gomez;
+DAT-PEREIRA-01;DAT-001;INV-P04;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-PEREIRA;PDV-PEREIRA > Caja 1;Honeywell;Voyager 1450g;Lector codigo barras;Honeywell;juan.perez;Lector USB

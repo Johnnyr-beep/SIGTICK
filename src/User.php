@@ -3470,7 +3470,7 @@ HTML;
             'id'                 => '22',
             'table'              => $this->getTable(),
             'field'              => 'registration_number',
-            'name'               => _x('user', 'Administrative number'),
+            'name'               => 'Cédula',
             'datatype'           => 'string',
         ];
 

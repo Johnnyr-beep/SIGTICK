@@ -1,0 +1,4 @@
+name,entidad,marca,modelo,tipo,numero_serie,ip,mac,gestion_url,puertos_totales,ubicacion,comentario
+SW-CARNES-COR-01,CARNES SANTACRUZ,Cisco,Catalyst 2960X,Switch core,FOC1234ABCD,192.168.10.1,00:11:22:33:44:55,https://192.168.10.1,24,Sala de servidores,Switch principal sede CARNES
+SW-PDV70-ACC-01,PDV-LA 70,TP-Link,TL-SG1024,Switch acceso,TP-AAAA-BBBB,192.168.20.10,AA:BB:CC:DD:EE:01,,24,Rack pared cajas,Switch para cajas y CCTV
+SW-PDV70-POE-01,PDV-LA 70,TP-Link,TL-SG2210P,Switch PoE,TP-CCCC-DDDD,192.168.20.11,AA:BB:CC:DD:EE:02,,8,Rack pared CCTV,Switch PoE solo para cámaras IP

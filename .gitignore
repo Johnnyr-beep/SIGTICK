@@ -1,6 +1,10 @@
 # Credenciales y configuración sensible
 .env
 config/config_db.php
+config/config_d.php
+config/glpicrypt.key
+config/oauth.pem
+config/oauth.pub
 
 # Archivos de GLPI generados
 files/_cache/

@@ -334,8 +334,9 @@ body.in_modal {
         --logo: var(--glpi-logo-dark-login);
 
         content: var(--logo);
-        width: 200px;
-        height: 110px;
+        width: 280px;
+        height: 210px;
+        object-fit: contain;
     }
 
     .main-content-card {

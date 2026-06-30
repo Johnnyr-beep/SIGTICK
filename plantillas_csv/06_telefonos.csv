@@ -1,0 +1,4 @@
+﻿Nombre;Numero de serie;Numero de inventario;Estado;Entidad;Ubicacion;Fabricante;Modelo;Tipo;Marca;Numero de linea;Usuario asignado;Comentarios
+TEL-PEREIRA-01;CEL-001;INV-T01;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-PEREIRA;PDV-PEREIRA;Samsung;Galaxy A14;Movil;Samsung;3001234567;juan.perez;Linea corporativa
+TEL-AGRO-01;CEL-002;INV-T02;Operativo;GRUPO SANTACRUZ > AGROPECUARIA > OFICINAS ASC;OFICINAS ASC > Recepcion;Panasonic;KX-TS500;Fijo;Panasonic;6043334444;;Telefono fijo de oficina
+TEL-CENTRO-01;CEL-003;INV-T03;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-CENTRO;PDV-CENTRO;Motorola;Moto G54;Movil;Motorola;3005556666;maria.gomez;

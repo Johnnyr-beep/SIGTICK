@@ -546,6 +546,16 @@
 
                      {% block more_fields %}
                      {% endblock %}
+
+                     {# Campos personalizados para Computer #}
+                     {% if item_type == 'Computer' %}
+                         {{ fields.textField(
+                             'licencia_windows',
+                             item.fields['licencia_windows']|default(''),
+                             __('Licencia de Windows'),
+                             field_options
+                         ) }}
+                     {% endif %}
                   {% endblock %}
                </div> {# .row #}
             </div> {# .row #}

@@ -66,8 +66,20 @@ if (isset($_REQUEST['totp_cancel'])) {
     session_destroy();
     Html::redirect($CFG_GLPI['root_doc'] . '/index.php');
 }
+$is_xhr = (($_SERVER['HTTP_X_REQUESTED_WITH'] ?? '') === 'XMLHttpRequest');
+
 if ($auth->login($_POST['login_name'] ?? '', $_POST['login_password'] ?? '', ($_REQUEST["noAUTO"] ?? false), $remember, $_POST['auth'] ?? '')) {
     Auth::redirectIfAuthenticated();
 } else {
+    if ($is_xhr) {
+        $errors = $auth->getErrors();
+        if (empty($errors)) {
+            $errors = [__('Usuario o contraseña incorrectos.')];
+        }
+        header('Content-Type: application/json; charset=utf-8');
+        http_response_code(400);
+        echo json_encode(['success' => false, 'errors' => array_values($errors)]);
+        exit;
+    }
     throw new AuthenticationFailedException(authentication_errors: $auth->getErrors());
 }

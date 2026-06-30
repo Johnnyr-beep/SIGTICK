@@ -399,8 +399,9 @@ body.in_modal {
 .page-anonymous .glpi-logo {
   --logo: var(--glpi-logo-dark-login);
   content: var(--logo);
-  width: 200px;
-  height: 110px;
+  width: 280px;
+  height: 210px;
+  object-fit: contain;
 }
 .page-anonymous .main-content-card .card-header:empty {
   display: none;

@@ -87,7 +87,7 @@
                </div>
             {% endif %}
             {% if user['registration_number']|length > 0 %}
-               <div>
+               <div title="Cédula" data-bs-toggle="tooltip" data-bs-placement="top">
                   <i class="ti ti-id-badge-2"></i>
                   {{ user['registration_number'] }}
                </div>
