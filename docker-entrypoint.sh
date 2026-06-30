@@ -83,4 +83,12 @@ if [ -n "$GLPI_CRYPT_KEY" ]; then
   echo "[entrypoint] glpicrypt.key restaurada desde GLPI_CRYPT_KEY."
 fi
 
+# Railway/Render asignan un puerto dinamico via $PORT; Apache escucha en 80 por
+# defecto. Reconfiguramos Apache para que escuche en $PORT cuando aplique.
+if [ -n "$PORT" ] && [ "$PORT" != "80" ]; then
+  echo "[entrypoint] Configurando Apache para escuchar en el puerto ${PORT}."
+  sed -ri "s/^Listen 80\$/Listen ${PORT}/" /etc/apache2/ports.conf
+  sed -ri "s/:80>/:${PORT}>/" /etc/apache2/sites-available/000-default.conf
+fi
+
 exec "$@"
