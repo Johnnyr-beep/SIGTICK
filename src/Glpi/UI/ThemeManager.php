@@ -88,6 +88,7 @@ class ThemeManager
                 new Theme('midnight', 'Midnight', true, false),
                 new Theme('premiumred', 'Premium Red', false, false),
                 new Theme('purplehaze', 'Purple Haze', false, false),
+                new Theme('sigtick', 'SIGTICK', false, false),
                 new Theme('teclib', 'Teclib', false, false),
                 new Theme('vintage', 'Vintage', false, false),
             ];

@@ -1,0 +1,111 @@
+/*!
+ * ---------------------------------------------------------------------
+ *
+ * GLPI - Gestionnaire Libre de Parc Informatique
+ *
+ * http://glpi-project.org
+ *
+ * @copyright 2015-2026 Teclib' and contributors.
+ * @copyright 2003-2014 by the INDEPNET Development Team.
+ * @licence   https://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * ---------------------------------------------------------------------
+ *
+ * LICENSE
+ *
+ * This file is part of GLPI.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ * ---------------------------------------------------------------------
+ */
+
+// SIGTICK - Grupo Santacruz brand palette.
+// Replicates the clean, light and airy look of the "rutas_web" app:
+// brand green primary, warm off-white background, white cards with soft
+// rounded corners and subtle shadows, strong Geist-first typography.
+:root[data-glpi-theme="sigtick"] {
+    // --- Brand (Santacruz green) ---
+    // brand #54a538 (84, 165, 56) / 600 #47912f / 700 #3b7c27 / ink #2f6b1e / soft #e9f5e2
+    --tblr-primary-rgb: 84, 165, 56;
+    --tblr-primary-fg: #ffffff; // white text over the green primary
+    --tblr-link-color-rgb: 59, 124, 39; // brand-700, readable link color (AA on white)
+
+    // --- Surfaces & backgrounds ---
+    --tblr-body-bg: #f6f6f2; // warm off-white page background
+    --tblr-bg-surface: #ffffff; // elevated cards / panels
+    --tblr-bg-surface-secondary: #f7f7f2; // card-2
+    --tblr-light: #f7f7f2;
+
+    // --- Typography colors ---
+    --tblr-body-color: #1a1c16; // primary text
+    --tblr-body-color-rgb: 26, 28, 22;
+    --tblr-secondary: #4a4f42; // secondary text
+    --tblr-secondary-fg: #ffffff;
+    --tblr-muted: #828877; // muted text
+    --tblr-navbar-color: #1a1c16;
+
+    // --- Borders ---
+    --tblr-border-color: #e7e7df;
+    --tblr-border-color-translucent: rgba(40, 44, 28, 0.09);
+
+    // --- Typography family ---
+    // Geist first (matches rutas_web); falls back to the system stack when
+    // Geist is not installed locally. No @font-face is declared here because
+    // the font files are not bundled with GLPI.
+    --tblr-font-sans-serif: "Geist", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
+
+    // --- Rounded corners (airy card look ~14-16px) ---
+    --tblr-border-radius: 10px;
+    --tblr-border-radius-lg: 14px;
+    --tblr-border-radius-xl: 16px;
+
+    // --- Main menu (branded deep-green sidebar) ---
+    --glpi-mainmenu-bg: #2f6b1e; // brand-ink
+    --glpi-mainmenu-fg: #f4faf0;
+    --glpi-mainmenu-fg-muted: #f4faf0aa;
+    --glpi-helpdesk-header: #e9f5e2; // brand-soft
+    --glpi-form-header-fg: #3b7c27;
+
+    // --- GLPI accent palette (illustrations / misc) ---
+    --glpi-palette-color-1: #47912f; // brand-600
+    --glpi-palette-color-2: #2f6b1e; // brand-ink
+    --glpi-palette-color-3: #54a538; // brand
+    --glpi-palette-color-4: #e9f5e2; // brand-soft
+
+    // --- Helpdesk header gradient (brand green tints, hue ~105deg) ---
+    --glpi-illustrations-gradient-1: hsl(105deg, 45%, 92%);
+    --glpi-illustrations-gradient-2: hsl(105deg, 45%, 65%);
+    --glpi-illustrations-gradient-3: hsl(105deg, 45%, 38%);
+
+    // ------------------------------------------------------------------
+    // Fine finishing (scoped to the sigtick theme only, does not touch core)
+    // Soft rounded cards with a subtle shadow, like rutas_web tiles.
+    // ------------------------------------------------------------------
+    --tblr-shadow-card: 0 1px 3px rgba(40, 44, 28, 0.06), 0 1px 2px rgba(40, 44, 28, 0.04);
+
+    .card {
+        border-radius: var(--tblr-border-radius-lg);
+        border: 1px solid var(--tblr-border-color);
+        box-shadow: var(--tblr-shadow-card);
+    }
+
+    // Marked headings: heavier weight and tight tracking.
+    h1, h2, h3, h4, h5, h6,
+    .card-title,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-weight: 650;
+        letter-spacing: -0.02em;
+    }
+}
