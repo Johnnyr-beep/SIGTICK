@@ -40,29 +40,49 @@ $CSS = <<<'CSS'
 html { -webkit-text-size-adjust: 100%; }
 body { -webkit-tap-highlight-color: transparent; }
 
-/* Inputs cómodos en cualquier resolución */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="url"],
-textarea,
-select,
-.form-control,
-.form-select {
-    font-size: 16px !important;  /* evita zoom auto del iPhone */
-    min-height: 44px;
+/* === REGLAS TOUCH — SOLO móvil/tablet ===
+   IMPORTANTE: no aplicar en escritorio. Al forzar min-height/padding sobre
+   .btn de forma global, se rompía el árbol de entidades: cada nodo es un
+   <button class="btn btn-link p-0"> dentro de una tabla Fancytree con scroll
+   virtual (viewport), que calcula la altura de fila. Con las alturas forzadas
+   dejaba de dibujar filas y el selector aparecía vacío, sin error en consola. */
+@media (max-width: 992px) {
+    /* Inputs cómodos al tacto */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"],
+    textarea,
+    select,
+    .form-control,
+    .form-select {
+        font-size: 16px !important;  /* evita zoom auto del iPhone */
+        min-height: var(--sc-touch-min, 44px);
+    }
+
+    /* Botones touch-friendly */
+    .btn {
+        min-height: 40px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .btn-sm { min-height: 34px; }
 }
 
-/* Botones touch-friendly */
-.btn {
-    min-height: 40px;
-    padding-left: 14px;
-    padding-right: 14px;
+/* El árbol de entidades (Fancytree) nunca debe recibir alturas forzadas */
+.entity_tree .btn,
+.entity_tree .btn-sm {
+    min-height: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
-.btn-sm { min-height: 34px; }
+.entity_tree input,
+.entity_tree .form-control {
+    min-height: 0;
+}
 
 /* === SCROLL HORIZONTAL EN TABLAS GRANDES === */
 .table-responsive {
