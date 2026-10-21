@@ -118,6 +118,25 @@ class Computer extends CommonDBTM implements AssignableItemInterface, DCBreadcru
         return ['assets', self::class];
     }
 
+    public static function getPropertyOptions(): array
+    {
+        return [
+            'alquilado' => 'Alquilado',
+            'propio'    => 'Propio',
+        ];
+    }
+
+    public function getFormFields(): array
+    {
+        $fields = parent::getFormFields();
+        if ($this->isField('propiedad')) {
+            $position = array_search('comment', $fields, true);
+            array_splice($fields, $position === false ? count($fields) : $position, 0, ['propiedad']);
+        }
+
+        return $fields;
+    }
+
     public static function getLogDefaultServiceName(): string
     {
         return 'inventory';
@@ -482,6 +501,14 @@ class Computer extends CommonDBTM implements AssignableItemInterface, DCBreadcru
             'table'              => $this->getTable(),
             'field'              => 'uuid',
             'name'               => __('UUID'),
+            'datatype'           => 'string',
+        ];
+
+        $tab[] = [
+            'id'                 => '48',
+            'table'              => $this->getTable(),
+            'field'              => 'propiedad',
+            'name'               => __('Property'),
             'datatype'           => 'string',
         ];
 
