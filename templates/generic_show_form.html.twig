@@ -475,6 +475,14 @@
                                   _n('Comment', 'Comments', get_plural_number()),
                                   specific_field_options
                               ) }}
+                          {% elseif field is same as 'propiedad' and item_type == 'Computer' %}
+                              {{ fields.dropdownArrayField(
+                                  'propiedad',
+                                  item.fields['propiedad']|default(''),
+                                  call('Computer::getPropertyOptions', []),
+                                  __('Property'),
+                                  specific_field_options
+                              ) }}
                           {% elseif field is same as 'ram' %}
                               {{ fields.numberField(
                                   'ram',
