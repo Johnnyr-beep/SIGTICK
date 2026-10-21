@@ -1,0 +1,4 @@
+﻿Nombre;Numero de serie;Numero de inventario;Estado;Entidad;Ubicacion;Fabricante;Modelo;Tipo;Tamano (pulgadas);Usuario asignado;Grupo asignado;Comentarios
+MON-PEREIRA-01;MN-001234;INV-M01;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-PEREIRA;PDV-PEREIRA > Caja 1;Samsung;S24R350;LED;24;juan.perez;Soporte TI;
+MON-CENTRO-01;MN-005678;INV-M02;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-CENTRO;PDV-CENTRO > Administracion;LG;22MP410;LED;22;maria.gomez;Administracion;
+MON-AGRO-01;MN-009999;INV-M03;En reparacion;GRUPO SANTACRUZ > AGROPECUARIA > TESORERIA;OFICINAS ASC > Contabilidad;Dell;P2422H;IPS;24;;;Sin asignar - en stock

@@ -173,7 +173,7 @@
                                     {{ fields.dropdownField('UserTitle', 'usertitles_id', item.fields['usertitles_id'], _x('person', 'Title')) }}
                                     {{ fields.textareaField('comment', item.fields['comment'], __('Comments')) }}
                                 {% endif %}
-                                {{ fields.textField('registration_number', item.fields['registration_number'], __('Administrative number')) }}
+                                {{ fields.textField('registration_number', item.fields['registration_number'], 'Cédula') }}
                             {% endif %}
                             {% if not item.isNewItem() %}
                                 {{ fields.dropdownField('Location', 'locations_id', item.fields['locations_id'], 'Location'|itemtype_name, {

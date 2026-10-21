@@ -1,0 +1,4 @@
+﻿Nombre;Numero de serie;Numero de inventario;Estado;Entidad;Ubicacion;Fabricante;Modelo;Tipo;IP;Usuario asignado;Grupo asignado;Tipo de gestion;Comentarios
+IMP-PEREIRA-01;IMP-XX1234;INV-I01;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-PEREIRA;PDV-PEREIRA > Caja 1;HP;LaserJet Pro M404n;Laser;192.168.1.50;;Soporte TI;Global;Impresora termica de facturacion
+IMP-CENTRO-01;IMP-YY5678;INV-I02;Operativo;GRUPO SANTACRUZ > CARNES SANTACRUZ > PDV-CENTRO;PDV-CENTRO > Administracion;Epson;EcoTank L3250;Inyeccion;192.168.1.51;;Administracion;Unidad;
+IMP-AGRO-01;IMP-ZZ9999;INV-I03;Operativo;GRUPO SANTACRUZ > AGROPECUARIA > OFICINAS ASC;OFICINAS ASC > Recepcion;Brother;HL-L2350DW;Laser;192.168.2.10;;Recepcion;Global;
